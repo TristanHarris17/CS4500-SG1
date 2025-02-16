@@ -19,8 +19,8 @@ def main():
     input('Press ENTER to continue')
     
     x=1
-    while(x==1):
-        try:
+    while(x==1): #Creates a loop for the user to continue inputting different files
+        try:     #if the file names previously inputted do not exist
             user_file = input('Enter the file name: ')
             filename_check = False
             
