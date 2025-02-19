@@ -1,14 +1,26 @@
+"""
+Programming Language: Python 3.12 IDE: Visual Studio Code
+
+Execution Instructions:
+Run this code within a Python compiler and use the console for inputs
+
+Group members: Logan Lindsay, Tristan Harris
+Submission date: 02/21/2025
+CS 4500
+This program is designed to take the information from a specially formatted csv file,
+seperate its values, and place those values into their respective DatedData.txt
+Names.txt, and PresentAbsent.txt files
+
+Packages/Data structures:
+Only imports the csv module to read the csv file input, mainly uses arrays to handle
+data
+
+Sources:
+W3schools.com/python/ - Used for syntax and module explanation
+https://www.geeksforgeeks.org/working-csv-files-python/ - csv file manipulation
+
+"""
 import csv
-#run this code within a python compilier and use the console for inputs
-#Group members: Logan Lindsay, Tristan Harris
-#Submission date:
-#CS 4500
-#This program is designed to take the information from a specially formatted csv file,
-#seperate its values, and place those values into their respective DatedData.txt
-#Names.txt, and PresentAbsent.txt files
-#Only imports the csv module to read the csv file input, mainly uses arrays to handle
-#data
-#W3schools.com/python/ - Used for syntax and module explanation
 
 
 def main():
@@ -49,7 +61,6 @@ def main():
             header.pop(0) # removes the blank cell in the header row
             file.close()
             # write names to Names.txt and Dates to DatedData.txt
-            # adds a extra blank line at the end idk if that will matter
             
             with open('Names.txt', mode= 'w')as f:
                 for item in header:
@@ -94,5 +105,5 @@ def main():
             exit()
             
         except FileNotFoundError:
-            print("Opps, that file does not exist,\nplease try a different file name")
+            print("Oops, that file does not exist,\nplease try a different file name")
 main()
